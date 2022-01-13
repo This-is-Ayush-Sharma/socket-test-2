@@ -7,7 +7,9 @@ const io = require('socket.io')(server, {
         origin: "*"
     }
 });
-
+app.get('/test',(req,res)=>{
+    res.send("this works fine!!!")
+})
 io.on("connection", (socket) => {
     // console.log("what is socket ", socket);
     console.log("socket is active to be connected");
